@@ -1,6 +1,6 @@
 [submodule "godot"]
 	path = godot
 	url = https://github.com/godotengine/godot
-[submodule "modules/platformer_pathfinding"]
-	path = modules/platformer_pathfinding
-	url = https://github.com/Lucrecious/platformer_pathfinding
+[submodule "modules/pathfinding2d"]
+	path = modules/pathfinding2d
+	url = https://github.com/Lucrecious/pathfinding2D
