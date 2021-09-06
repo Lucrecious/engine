@@ -1,3 +1,9 @@
 [submodule "godot"]
 	path = godot
 	url = https://github.com/godotengine/godot
+[submodule "modules/pathfinder"]
+	path = modules/pathfinder
+	url = https://github.com/Lucrecious/pathfinder
+[submodule "modules/tools"]
+	path = modules/tools
+	url = https://github.com/Lucrecious/godot-module-tools
