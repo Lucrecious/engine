@@ -28,7 +28,9 @@ jobs:
           sudo apt-get install libasound2-dev libpulse-dev libudev-dev libxi-dev libxrandr-dev yasm
       
       - name: Build Godot Editor
-        run: scons platform=x11 -j8 custom_modules=../
+        run: |
+          cd $GITHUB_WORKSPACE
+          scons platform=x11 -j8 custom_modules=../
 
 
 
