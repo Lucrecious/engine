@@ -19,18 +19,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
 
-    #  - name: Download dependencies
-    #    run: |
-    #      sudo apt-get install build-essential
-    #      sudo apt-get install scons pkg-config
-    #      sudo apt-get install libx11-dev libxcursor-dev libxinerama-dev libgl1-mesa-dev libglu-dev
-    #      sudo apt-get install libasound2-dev libpulse-dev libudev-dev libxi-dev libxrandr-dev yasm
+      - name: Download dependencies
+        run: |
+          sudo apt-get install build-essential
+          sudo apt-get install scons pkg-config
+          sudo apt-get install libx11-dev libxcursor-dev libxinerama-dev libgl1-mesa-dev libglu-dev
+          sudo apt-get install libasound2-dev libpulse-dev libudev-dev libxi-dev libxrandr-dev yasm
       
       - name: Build Godot Editor
         run: |
           cd ${GITHUB_WORKSPACE}/godot
-          ls -all
+          scons platform=x11 -j8 custom_modules=../modules
 
 
 
